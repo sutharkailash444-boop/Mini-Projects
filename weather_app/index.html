@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <span>
+        Search City to see weather
+    </span>
+    <div class="main_box">
+        <header>
+            <h1><i class="ri-cloud-fill"></i>Weather App</h1>
+            <p class="header_para">Fetch real time weather for any city using an API (OpenweatherAPI).</p>
+        </header>
+        <div class="input_box">
+            <input type="text" placeholder="Enter City" id="input" spellcheck="false">
+            <button class="search">Search</button>
+        </div>
+        <div class="data">
+            <div class="data_header">
+                <h2 class="city_name"></h2>
+                <p class="cloud_para"></p>
+            </div>
+            <div class="data_middle">
+                <h1 id="tempressure_text"></h1>
+            </div>
+            <div class="data_footer">
+                <div class="humadity_sunrise_box">
+                    <p class="humadity"></p>
+                    <p class="sunrise"></p>
+                </div>
+                <div class="wind_sunset">
+                    <p class="wind"></p>
+                    <p class="sunset"></p>
+                </div>
+            </div>
+        </div>
+        <div class="message">
+            <p class="message_para">Enter a city and press Search</p>
+        </div>
+        <div class="short_explain_box">
+            <details>
+                <summary>Click To show how it works</summary>
+                <p class="detail_para">
+                    `script.js` builds the API URL, fetches the current weather JSON, extracts relevant fields and
+                    updates the DOM. It uses `async/await`, handles common errors, and formats times using the timezone
+                    offset returned by the API.
+                </p>
+            </details>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
